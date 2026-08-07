@@ -2,7 +2,7 @@ name: Tests
 on: push
 jobs:
   eslint:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, X64, lxc]
     steps:
       - uses: actions/checkout@v4
       - name: Install modules
@@ -11,7 +11,7 @@ jobs:
         run: ./node_modules/.bin/eslint **/*.ts
 
   unit-tests:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, X64, lxc]
     steps:
       - uses: actions/checkout@v4
       - name: Install modules

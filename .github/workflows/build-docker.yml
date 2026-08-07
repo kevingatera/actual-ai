@@ -2,7 +2,7 @@ name: Docker Image CI
 on: push
 jobs:
   docker:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, X64, lxc]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
